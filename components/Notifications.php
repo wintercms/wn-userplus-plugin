@@ -1,4 +1,4 @@
-<?php namespace Rainlab\Userplus\Components;
+<?php namespace Winter\Userplus\Components;
 
 use Auth;
 use Carbon\Carbon;

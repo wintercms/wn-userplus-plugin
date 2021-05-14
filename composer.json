@@ -1,9 +1,9 @@
 {
-    "name": "rainlab/userplus-plugin",
-    "type": "october-plugin",
-    "description": "User plus plugin for October CMS",
-    "homepage": "https://octobercms.com/plugin/rainlab-userplus",
-    "keywords": ["october", "octobercms", "blog", "userplus", "user"],
+    "name": "winter/wn-userplus-plugin",
+    "type": "winter-plugin",
+    "description": "User plus plugin for Winter CMS",
+    "homepage": "https://github.com/wintercms/wn-userplus-plugin",
+    "keywords": ["winter cms", "winter", "blog", "userplus", "user"],
     "license": "MIT",
     "authors": [
         {
@@ -20,8 +20,9 @@
     "require": {
         "php": ">=5.5.9",
         "composer/installers": "~1.0",
-        "rainlab/user-plugin": "dev-master",
-        "rainlab/location-plugin": "dev-master"
+        "winter/wn-user-plugin": "dev-main",
+        "winter/wn-location-plugin": "dev-main",
+        "winter/wn-notify-plugin": "dev-main"
     },
     "minimum-stability": "dev"
 }

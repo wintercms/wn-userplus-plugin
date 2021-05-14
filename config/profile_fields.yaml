@@ -3,45 +3,45 @@
 # ===================================
 
 phone:
-    label: rainlab.userplus::lang.user.phone
-    tab: rainlab.userplus::lang.tab.profile
+    label: winter.userplus::lang.user.phone
+    tab: winter.userplus::lang.tab.profile
     span: left
 
 mobile:
-    label: rainlab.userplus::lang.user.mobile
-    tab: rainlab.userplus::lang.tab.profile
+    label: winter.userplus::lang.user.mobile
+    tab: winter.userplus::lang.tab.profile
     span: right
 
 company:
-    label: rainlab.userplus::lang.user.company
-    tab: rainlab.userplus::lang.tab.profile
+    label: winter.userplus::lang.user.company
+    tab: winter.userplus::lang.tab.profile
     span: left
 
 street_addr:
-    label: rainlab.userplus::lang.user.street_addr
-    tab: rainlab.userplus::lang.tab.profile
+    label: winter.userplus::lang.user.street_addr
+    tab: winter.userplus::lang.tab.profile
 
 city:
-    label: rainlab.userplus::lang.user.city
-    tab: rainlab.userplus::lang.tab.profile
+    label: winter.userplus::lang.user.city
+    tab: winter.userplus::lang.tab.profile
     span: left
 
 zip:
-    label: rainlab.userplus::lang.user.zip
-    tab: rainlab.userplus::lang.tab.profile
+    label: winter.userplus::lang.user.zip
+    tab: winter.userplus::lang.tab.profile
     span: right
 
 country:
-    label: rainlab.location::lang.country.label
-    placeholder: rainlab.location::lang.country.select
+    label: winter.location::lang.country.label
+    placeholder: winter.location::lang.country.select
     type: dropdown
-    tab: rainlab.userplus::lang.tab.profile
+    tab: winter.userplus::lang.tab.profile
     span: left
 
 state:
-    label: rainlab.location::lang.state.label
-    placeholder: rainlab.location::lang.state.select
+    label: winter.location::lang.state.label
+    placeholder: winter.location::lang.state.select
     type: dropdown
-    tab: rainlab.userplus::lang.tab.profile
+    tab: winter.userplus::lang.tab.profile
     span: right
     dependsOn: country

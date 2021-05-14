@@ -1,13 +1,13 @@
-<?php namespace RainLab\UserPlus;
+<?php namespace Winter\UserPlus;
 
 use Yaml;
 use File;
 use System\Classes\PluginBase;
-use RainLab\User\Models\User as UserModel;
-use RainLab\Notify\Models\Notification as NotificationModel;
-use RainLab\User\Controllers\Users as UsersController;
-use RainLab\Notify\NotifyRules\SaveDatabaseAction;
-use RainLab\User\Classes\UserEventBase;
+use Winter\User\Models\User as UserModel;
+use Winter\Notify\Models\Notification as NotificationModel;
+use Winter\User\Controllers\Users as UsersController;
+use Winter\Notify\NotifyRules\SaveDatabaseAction;
+use Winter\User\Classes\UserEventBase;
 
 /**
  * UserPlus Plugin Information File
@@ -15,7 +15,7 @@ use RainLab\User\Classes\UserEventBase;
 class Plugin extends PluginBase
 {
 
-    public $require = ['RainLab.User', 'RainLab.Location', 'RainLab.Notify'];
+    public $require = ['Winter.User', 'Winter.Location', 'Winter.Notify'];
 
     /**
      * Returns information about this plugin.
@@ -25,11 +25,12 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'rainlab.userplus::lang.plugin.name',
-            'description' => 'rainlab.userplus::lang.plugin.description',
+            'name'        => 'winter.userplus::lang.plugin.name',
+            'description' => 'winter.userplus::lang.plugin.description',
             'author'      => 'Alexey Bobkov, Samuel Georges',
             'icon'        => 'icon-user-plus',
-            'homepage'    => 'https://github.com/rainlab/userplus-plugin'
+            'homepage'    => 'https://github.com/rainlab/userplus-plugin',
+            'replaces'    => ['RainLab.UserPlus' => '<= 1.1.0'],
         ];
     }
 
@@ -44,7 +45,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            \RainLab\UserPlus\Components\Notifications::class => 'notifications',
+            \Winter\UserPlus\Components\Notifications::class => 'notifications',
         ];
     }
 
@@ -60,7 +61,7 @@ class Plugin extends PluginBase
                 'zip'
             ]);
 
-            $model->implement[] = 'RainLab.Location.Behaviors.LocationModel';
+            $model->implement[] = 'Winter.Location.Behaviors.LocationModel';
 
             $model->morphMany['notifications'] = [
                 NotificationModel::class,
@@ -78,7 +79,7 @@ class Plugin extends PluginBase
                 return;
             }
 
-            $configFile = plugins_path('rainlab/userplus/config/profile_fields.yaml');
+            $configFile = plugins_path('winter/userplus/config/profile_fields.yaml');
             $config = Yaml::parse(File::get($configFile));
             $widget->addTabFields($config);
         });
@@ -90,9 +91,9 @@ class Plugin extends PluginBase
             'events' => [],
             'actions' => [],
             'conditions' => [
-                \RainLab\UserPlus\NotifyRules\UserLocationAttributeCondition::class
+                \Winter\UserPlus\NotifyRules\UserLocationAttributeCondition::class
             ],
-            'presets' => '$/rainlab/userplus/config/notify_presets.yaml',
+            'presets' => '$/winter/userplus/config/notify_presets.yaml',
         ];
     }
 
@@ -103,7 +104,7 @@ class Plugin extends PluginBase
         }
 
         UserEventBase::extend(function($event) {
-            $event->conditions[] = \RainLab\UserPlus\NotifyRules\UserLocationAttributeCondition::class;
+            $event->conditions[] = \Winter\UserPlus\NotifyRules\UserLocationAttributeCondition::class;
         });
     }
 
