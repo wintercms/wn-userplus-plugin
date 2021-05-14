@@ -1,28 +1,37 @@
 {
     "name": "winter/wn-userplus-plugin",
     "type": "winter-plugin",
-    "description": "User plus plugin for Winter CMS",
+    "description": "Extends the Winter.User plugin for Winter CMS to add extra profile fields",
     "homepage": "https://github.com/wintercms/wn-userplus-plugin",
-    "keywords": ["winter cms", "winter", "blog", "userplus", "user"],
+    "keywords": ["winter cms", "winter", "plugin", "userplus", "user"],
     "license": "MIT",
     "authors": [
         {
             "name": "Alexey Bobkov",
             "email": "aleksey.bobkov@gmail.com",
-            "role": "Co-founder"
+            "role": "Original Author"
         },
         {
             "name": "Samuel Georges",
             "email": "daftspunky@gmail.com",
-            "role": "Co-founder"
+            "role": "Original Author"
+        },
+        {
+            "name": "Winter CMS Maintainers",
+            "homepage": "https://wintercms.com",
+            "role": "Maintainer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/wintercms/wn-userplus-plugin/issues",
+        "discord": "https://discord.gg/D5MFSPH6Ux",
+        "source": "https://github.com/wintercms/wn-userplus-plugin"
+    },
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.2",
         "composer/installers": "~1.0",
         "winter/wn-user-plugin": "dev-main",
         "winter/wn-location-plugin": "dev-main",
         "winter/wn-notify-plugin": "dev-main"
-    },
-    "minimum-stability": "dev"
+    }
 }
