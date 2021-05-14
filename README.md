@@ -1,9 +1,9 @@
 # User Plus+ plugin
 
-This plugin extends the [User plugin](http://octobercms.com/plugin/rainlab-user) with extra profile fields and features.
+This plugin extends the [User plugin](https://github.com/wintercms/wn-user-plugin) with extra profile fields and features.
 
 * Adds the following extra fields to a user: `phone`, `mobile`, `company`, `street_addr`, `city`, `zip`.
-* A user can belong to a Country and/or State, sourced from the [Location plugin](http://octobercms.com/plugin/rainlab-location).
+* A user can belong to a Country and/or State, sourced from the [Location plugin](https://github.com/wintercms/wn-location-plugin).
 
 ### Potential features
 
