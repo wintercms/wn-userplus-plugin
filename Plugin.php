@@ -29,7 +29,7 @@ class Plugin extends PluginBase
             'description' => 'winter.userplus::lang.plugin.description',
             'author'      => 'Alexey Bobkov, Samuel Georges',
             'icon'        => 'icon-user-plus',
-            'homepage'    => 'https://github.com/rainlab/userplus-plugin',
+            'homepage'    => 'https://github.com/wintercms/wn-userplus-plugin',
             'replaces'    => ['RainLab.UserPlus' => '<= 1.1.0'],
         ];
     }
