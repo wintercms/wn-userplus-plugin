@@ -33,5 +33,11 @@
         "winter/wn-user-plugin": ">=2.0.0",
         "winter/wn-location-plugin": ">=2.0.0",
         "winter/wn-notify-plugin": ">=2.0.0"
+    },
+    "replace": {
+        "rainlab/userplus-plugin": "~1.2"
+    },
+    "extra": {
+        "installer-name": "userplus"
     }
 }
