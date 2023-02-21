@@ -75,7 +75,7 @@ class Plugin extends PluginBase
     {
         UsersController::extendFormFields(function($widget) {
             // Prevent extending of related form instead of the intended User form
-            if (!$widget->model instanceof UserModel) {
+            if (!$widget->model instanceof UserModel || $widget->isNested) {
                 return;
             }
 
