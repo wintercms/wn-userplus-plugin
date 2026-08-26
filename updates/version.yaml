@@ -9,3 +9,8 @@
 "1.0.4": Add various languages and minor bug fixes.
 "1.1.0": Compatibility with Notify plugin.
 "2.0.0": Winter.UserPlus Rebranding
+"2.0.1":
+    - Fixed profile fields being added to nested forms in the Users controller.
+    - Added the Russian translation.
+    - Relaxed the Winter.User, Winter.Location and Winter.Notify dependency constraints.
+    - Automatically replaces the RainLab.UserPlus plugin when installed.
